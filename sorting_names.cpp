@@ -20,24 +20,24 @@ void sortingNamesAtoZ(int numberOfNames, std::string *name)
 
 int main()
 {
-	//Запрос на количество вводимых имен
+	// Request the number of names to be entered
     std::cout << "How many names would you like to enter? ";
     int numberOfNames;
     std::cin >> numberOfNames;
 
     std::string *name = new std::string[numberOfNames];
 
-	//Получение имен
+	// Getting names from user input
     for (int i = 0; i < numberOfNames; ++i)
     {
         std::cout << "Enter name #" << i+1 << ": ";
         std::cin >> name[i];
     }
 
-	//Сортировка имен
+	// Sorting names in alphabetical order
 	sortingNamesAtoZ(numberOfNames, name);
 
-	//Вывод отсортированых имен по алфавиту
+	// Displaying the sorted list of names
 	std::cout << "Here is your sorted list: \n";
 
 	for (int i = 0; i < numberOfNames; ++i)
